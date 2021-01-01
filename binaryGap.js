@@ -9,24 +9,24 @@
 const binaryGap = (n) => {
   // convert n to a binary value
   let decimalN = n.toString(2);
-  let regex = /10+1/g; // Change this line
+  let regex = /(?!1)(0+)(?=1)/g;
   let result = decimalN.match(regex);
   let gap;
   if (result) {
-    let leng = result[0];
+    let leng = result[0].length;
     for (let i = 0; i < result.length; i++) {
       if (result[i].length > leng) {
-        leng = result[i];
+        leng = result[i].length;
       }
     }
     // we should only sequence of 0 and remove the 1 from beginning and 1 from end of sequence.
-    gap = leng.length - 2;
+    gap = leng;
   } else gap = 0;
   return gap;
 };
 
 //tests
-console.log(binaryGap(529));
+console.log(binaryGap(9));
 console.log(binaryGap(20));
-console.log(binaryGap(15));
+console.log(binaryGap(328));
 console.log(binaryGap(32));
