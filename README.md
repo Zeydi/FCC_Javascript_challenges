@@ -1,2 +1,3 @@
-# FCC_Javascript_challenges
-solutions for Free code camp javascript challenges
+# Javascript_challenges
+
+solutions for javascript challenges from coding websites such as Freecodecamp, codility ...
