@@ -1,3 +1,5 @@
+//Return the length of the longest word in the provided sentence.
+
 function findLongestWordLength(str) {
   let strArr = str.split(' ');
   return strArr.reduce(function (elt, nextElt) {
