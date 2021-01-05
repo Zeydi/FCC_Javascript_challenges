@@ -13,6 +13,7 @@
 // the element at index 5 has value 7 and is unpaired.
 
 //this approach is not much performant with big size array
+
 const solution = (arr) => {
   // write your code in JavaScript (Node.js 8.9.4)
   let res;
@@ -20,6 +21,11 @@ const solution = (arr) => {
     if (arr.filter((item) => item == arr[i]).length < 2) return arr[i];
   }
 };
+let startTime1 = new Date();
+console.log(solution([1, 15, 47, 67, 47, 1, 89, 15, 67]));
+let endTime1 = new Date();
+let runTime1 = endTime1 - startTime1;
+console.log('runtime :', runTime1);
 
 //this approach is much performant with big size array
 
@@ -43,5 +49,8 @@ const newSolution = (A) => {
   return oddElement;
 };
 
-console.log(solution([1, 5, 4, 6, 4, 1, 2, 6, 5]));
+let startTime2 = new Date();
 console.log(newSolution([1, 15, 47, 67, 47, 1, 89, 15, 67]));
+let endTime2 = new Date();
+let runTime2 = endTime2 - startTime2;
+console.log('runtime :', runTime2);
