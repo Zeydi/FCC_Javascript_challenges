@@ -50,3 +50,20 @@ console.log(missingElet([]));
 let endTime1 = new Date();
 let runTime1 = endTime1 - startTime1;
 console.log('runtime 1:', runTime1);
+
+// performance 100%
+
+const solution = (A) => {
+  let sum = ((A.length + 1) * (A.length + 2)) / 2;
+  let sumA = 0;
+  for (let i = 0; i < A.length; i++) {
+    sumA += A[i];
+  }
+  return sum - sumA;
+};
+
+let startTime2 = new Date();
+console.log(solution([]));
+let endTime2 = new Date();
+let runTime2 = endTime2 - startTime2;
+console.log('runtime 2:', r
