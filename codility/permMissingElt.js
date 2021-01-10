@@ -66,4 +66,4 @@ let startTime2 = new Date();
 console.log(solution([]));
 let endTime2 = new Date();
 let runTime2 = endTime2 - startTime2;
-console.log('runtime 2:', r
+console.log('runtime 2:', runTime2);
